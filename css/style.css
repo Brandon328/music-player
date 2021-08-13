@@ -1,0 +1,337 @@
+/* font-family: 'Roboto', sans-serif; */
+*{
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  padding: 20px;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #d0d0d0, #dcdcdc, #e7e7e7, #f3f3f3, #ffffff);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+:root{
+  --primary-color: #7FA1FE;
+  --secondary-color: #585a5e;
+  --gray: #E9E9E9;
+}
+
+
+/* ========================= HEADER */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  max-width: 1100px;
+  justify-self: center;
+  padding-block-end: 10px;
+}
+
+header i{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+header span{
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+
+/* ================================================= MAIN */
+main{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ================================================ MUSIC SECTION */
+
+.music-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; 
+  height: 100%;
+  max-height: 700px;
+}
+
+
+/* ========== ALBUM SECTION */
+
+main .album-section{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin-block-end: 10px;
+}
+
+#music-img{
+  width: 70%;
+  max-width: 400px;
+  margin-block-end: 5px;
+  border: 7px solid white;
+
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow:  7px 7px 23px #adadad,
+              -7px -7px 23px #ffffff;
+}
+
+#music-title{
+  color: var(--secondary-color);
+  font-size: 2.4rem;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+#music-artist{
+  color: var(--secondary-color);
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 10px 0 0;
+}
+
+
+
+/* ===================== PROGRESS BAR SECTION*/
+.progress-bar-section{
+  margin-block-end: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+
+.progress-bar-section .show-time-section{
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-bar-section .show-time-section span{
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+#progress{
+  width: 100%;
+  height: 14px;
+  appearance: none;
+  -webkit-appearance: none;
+  border:none;
+  cursor: pointer;
+}
+
+#progress::-webkit-progress-bar{
+  border-radius: 20px;
+  background-color: #dbdbdb;
+}
+
+#progress::-webkit-progress-value{
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+#progress::-webkit-progress-inner-element {
+  border-radius: 20px;
+  border: 1px solid rgb(241, 241, 241);
+
+}
+
+/* ============= VOLUME SECTION */
+
+#volume{
+  font-size: 14px;
+  margin-inline-end: 8px;
+}
+
+.volume-range-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-end: 20px;
+}
+
+#volume-range{
+  width: 100px;
+  cursor: pointer;
+}
+
+
+/* =================  BUTTONS SECTION */
+.buttons-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.buttons-section .media-button{
+  border: 1px solid rgb(241, 241, 241);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--gray);
+  
+  box-shadow:  5px 5px 10px #bebebe,
+              -5px -5px 10px #ffffff;
+  cursor: pointer;
+}
+
+
+.media-button .media-button-icon{
+  width: 20px;
+}
+
+.media-button:active{
+  box-shadow: inset 5px 5px 10px #bebebe,
+              inset -5px -5px 10px #ffffff;
+}
+
+.media-button:active .media-button-icon{
+  color: #2a63ff;
+}
+
+#play-pause{
+  background-color: var(--primary-color);
+}
+
+
+#play-pause-icon{
+  color: white;
+}
+
+
+/* ======================================================== PLAYLIST SECTION */
+
+.playlist-section{
+  max-height: 700px;
+  overflow-y: scroll;
+  display: none;
+}
+
+.playlist-section::-webkit-scrollbar{
+  display: none;
+}
+
+
+.playlist-section .song{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px 20px;
+  margin: 0 0 20px;
+  border-block-end: 1px solid rgb(192, 192, 192);
+}
+
+.song .playlist-img{
+  width: 40px;
+  border-radius: 5px;
+  background: #e0e0e0;
+  box-shadow: inset 5px 5px 26px #8f8f8f,
+              inset -5px -5px 26px #ffffff;
+  border: 1px solid rgb(241, 241, 241);
+  margin-inline-end: 10px;
+}
+
+.song .title-section{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.title-section h3{
+  margin: 0 0 3px;
+  font-size: 1.4rem;
+}
+
+.title-section span{
+  font-size: 1.2rem;
+}
+
+.song .playlist-playpause{
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray);
+  border: 1px solid rgb(241, 241, 241);
+  box-shadow: 4px 4px 3px #cccccc,
+  -4px -4px 3px #f4f4f4;
+  cursor: pointer;
+}
+
+.song .playlist-playpause:active{
+  box-shadow: inset 5px 5px 10px #bebebe,
+              inset -5px -5px 10px #ffffff;
+}
+
+.song .playlist-artist{
+  color: var(--secondary-color)
+}
+
+
+/* ==================== SOME MEDIA QUERIES */
+
+@media screen and (max-height: 540px) {
+  .playlist-section{
+    height: 440px;
+    overflow:scroll;
+  }
+}
+
+@media screen and (min-height: 700px) {
+  #music-img{
+    margin-block-end: 20px;
+  }
+}
+
+@media screen and (min-height: 800px) and (min-width: 1000px){
+  body{
+    padding: 50px;
+  }
+}
+
+@media screen and (min-height: 700px) and (min-width: 440px){
+  #play-pause{
+    width: 90px;
+    height: 90px;
+  }
+  #play-pause-icon{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #music-title{
+    font-size: 2rem;
+  }
+  #music-artist{
+    font-size: 1.5rem;
+  }
+
+  .song .title-section{
+    width: 180px;
+  }
+
+  #music-img{
+    width: 60%;
+  }
+}

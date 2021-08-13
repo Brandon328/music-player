@@ -1,0 +1,34 @@
+.playlist-section{
+  display: block !important;
+}
+
+.music-section{
+  display: flex !important;
+}
+
+.title-section h3{
+  font-size: 1.8rem;
+}
+
+.song .playlist-artist{
+  font-size: 1.6rem;
+}
+
+.song .title-section{
+  width: 300px;
+}
+
+.song .playlist-img{
+  width: 50px;
+}
+
+#playlist-icon{
+  display: none;
+}
+
+header{
+  justify-content: center;
+  margin-block-end: 30px;
+}
+
+

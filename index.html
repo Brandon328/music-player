@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d7267737f7.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tablet.css" media="(min-width: 950px)">
+  <link rel="stylesheet" href="css/desktop.css" media="(min-width: 1200px)">
+</head>
+<body>
+  <header>
+    <i class="fas fa-list" id="playlist-icon"></i>
+    <span id="music-status">MUSIC PLAYER </span>
+  </header>
+  <main>
+    <section class="music-section" id="music-section">
+      <section class="album-section">
+        <img id="music-img" alt="imagen del album">;
+        <h1 id="music-title"></h1>
+        <h2 id="music-artist"></h2>
+      </section>
+      <section class="progress-bar-section">
+        <label for="progress" class="show-time-section">
+          <span id="current-time"></span>
+          <span id="left-time"></span>
+        </label>
+        <progress id="progress" value="50" max="100"></progress>
+      </section>
+      <section class="volume-range-section">
+        <i class="fas fa-volume-up" id="volume"></i>
+        <input type="range" step="0.01" min="0" max="1" value="1" id="volume-range">
+      </section>
+      <section class="buttons-section">
+        <button type="button" id="loop" class="media-button">
+          <i class="fas fa-redo-alt media-button-icon" id="loop-icon"></i>
+        </button>
+        <button type="button" id="prev" class="media-button">
+          <i class="fas fa-backward media-button-icon"></i>
+        </button>
+        <button type="button" class="media-button" id="play-pause">
+          <i class="fas fa-play media-button-icon" id="play-pause-icon"></i>
+        </button>
+        <button type="button" id="next" class="media-button">
+          <i class="fas fa-forward media-button-icon"></i>
+        </button>
+        <button type="button" id="shufle" class="media-button">
+          <i class="fas fa-random media-button-icon" id="shuffle-icon"></i>
+        </button>
+      </section>
+    </section>
+    <section class="playlist-section" id="playlist"></section>
+  </main>
+
+  <script src="js/musicas.js"></script>
+  <script src="js/playlist.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
